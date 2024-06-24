@@ -14,12 +14,12 @@ import "./App.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="" element={<Home />} />
-      <Route path=":category" element={<Category />} />
-      <Route path="search/:query" element={<Search />} />
-      <Route path=":type/:slug" element={<Gif />} />
-      <Route path="favourites" element={<Favourites />} />
+    <Route element={<Layout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/:category" element={<Category />} />
+      <Route path="/search/:query" element={<Search />} />
+      <Route path="/:type/:slug" element={<Gif />} />
+      <Route path="/favourites" element={<Favourites />} />
     </Route>
   )
 );
