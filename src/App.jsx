@@ -11,6 +11,7 @@ import Search from "./pages/Search";
 import Gif from "./pages/Gif";
 import Favourites from "./pages/Favourites";
 import "./App.css";
+import GifProvider from "./context/gif-context";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +26,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <GifProvider>
+      <RouterProvider router={router} />;
+    </GifProvider>
+  );
 }
 
 export default App;
